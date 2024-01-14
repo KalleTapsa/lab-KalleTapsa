@@ -9,7 +9,8 @@ def encode(s):
     if len(s) > 1000:
         raise ValueError
 
-    s=s.ljust(1000-origlen,"a")
+    s=s.ljust(1000,"a")
+    print(s)
 
     for c in s:
         if c in ['å', 'ä', 'ö', '+']:
